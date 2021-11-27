@@ -53,7 +53,9 @@ pipeline {
 						sh "sshpass -p '$USERPASS' -v ssh -o StrictHostKeyChecking=no $USERNAME@${env.prod_ip} \"docker run --restart always --name train-schedule -p 8080:8080 -d roshanyadav01/train-schedule:${env.BUILD_NUMBER}\""\
 					}
 				}	
-            }
-        }
-    }
+            		}
+        	}
+    	}
 }
+
+	
